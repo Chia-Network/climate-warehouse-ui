@@ -584,7 +584,7 @@ export const getPaginatedData = ({
           dispatch(
             setNotificationMessage(
               NotificationMessageTypeEnum.error,
-              formatApiErrorResponse(errorResponse, 'something-went-wrong'),
+              formatApiErrorResponse(errorResponse, errorResponse.error),
             ),
           );
         }
@@ -636,7 +636,7 @@ export const getStagingPaginatedData = ({
           dispatch(
             setNotificationMessage(
               NotificationMessageTypeEnum.error,
-              formatApiErrorResponse(errorResponse, 'something-went-wrong'),
+              formatApiErrorResponse(errorResponse, errorResponse.error),
             ),
           );
         }
@@ -684,7 +684,7 @@ export const commitStagingData = (data, comment) => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(errorResponse, 'transactions-not-committed'),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
@@ -781,10 +781,7 @@ export const updateGovernancePickLists = data => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(
-              errorResponse,
-              'governance-picklists-update-failed',
-            ),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
@@ -836,10 +833,7 @@ export const initiateGovernance = () => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(
-              errorResponse,
-              'governance-initiating-failed',
-            ),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
@@ -886,10 +880,7 @@ export const updateGovernanceOrgLists = data => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(
-              errorResponse,
-              'governance-orglist-update-failed',
-            ),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
@@ -937,10 +928,7 @@ export const deleteStagingData = uuid => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(
-              errorResponse,
-              'staging-group-could-not-be-deleted',
-            ),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
@@ -984,10 +972,7 @@ export const deleteAllStagingData = () => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(
-              errorResponse,
-              'delete-all-staging-data-error',
-            ),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
@@ -1035,7 +1020,7 @@ export const retryStagingData = uuid => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(errorResponse, 'transactions-not-staged'),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
@@ -1083,7 +1068,7 @@ export const deleteUnit = warehouseUnitId => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(errorResponse, 'unit-could-not-be-deleted'),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
@@ -1131,10 +1116,7 @@ export const deleteProject = warehouseProjectId => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(
-              errorResponse,
-              'project-could-not-be-deleted',
-            ),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
@@ -1182,7 +1164,7 @@ export const postNewProject = data => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(errorResponse, 'project-not-created'),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
@@ -1230,10 +1212,7 @@ export const updateProjectRecord = data => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(
-              errorResponse,
-              'project-could-not-be-edited',
-            ),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
@@ -1282,7 +1261,7 @@ export const postNewOrg = data => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(errorResponse, 'organization-not-created'),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
@@ -1377,7 +1356,7 @@ export const importHomeOrg = orgUid => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(errorResponse, 'organization-not-created'),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
@@ -1587,7 +1566,7 @@ export const postNewUnits = data => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(errorResponse, 'unit-not-created'),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
@@ -1634,7 +1613,7 @@ export const splitUnits = data => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(errorResponse, 'unit-could-not-be-split'),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
@@ -1682,7 +1661,7 @@ export const updateUnitsRecord = data => {
         dispatch(
           setNotificationMessage(
             NotificationMessageTypeEnum.error,
-            formatApiErrorResponse(errorResponse, 'unit-could-not-be-edited'),
+            formatApiErrorResponse(errorResponse, errorResponse.error),
           ),
         );
       }
