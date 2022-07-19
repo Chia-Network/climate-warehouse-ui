@@ -33,6 +33,7 @@ import {
   TextareaSizeEnum,
   TextareaStateEnum,
   FormikError,
+  SelectCreatable,
 } from '..';
 
 const ProjectDetailsForm = () => {
@@ -57,8 +58,7 @@ const ProjectDetailsForm = () => {
                 <ToolTipContainer
                   tooltip={intl.formatMessage({
                     id: 'projects-project-name-description',
-                  })}
-                >
+                  })}>
                   <DescriptionIcon height="14" width="14" />
                 </ToolTipContainer>
               </Body>
@@ -92,8 +92,7 @@ const ProjectDetailsForm = () => {
                 <ToolTipContainer
                   tooltip={intl.formatMessage({
                     id: 'projects-project-id-description',
-                  })}
-                >
+                  })}>
                   <DescriptionIcon height="14" width="14" />
                 </ToolTipContainer>
               </Body>
@@ -126,8 +125,7 @@ const ProjectDetailsForm = () => {
                   <ToolTipContainer
                     tooltip={intl.formatMessage({
                       id: 'projects-description-description',
-                    })}
-                  >
+                    })}>
                     <DescriptionIcon height="14" width="14" />
                   </ToolTipContainer>
                 </Body>
@@ -157,8 +155,7 @@ const ProjectDetailsForm = () => {
                 <ToolTipContainer
                   tooltip={intl.formatMessage({
                     id: 'projects-project-developer-description',
-                  })}
-                >
+                  })}>
                   <DescriptionIcon height="14" width="14" />
                 </ToolTipContainer>
               </Body>
@@ -192,8 +189,7 @@ const ProjectDetailsForm = () => {
                 <ToolTipContainer
                   tooltip={intl.formatMessage({
                     id: 'projects-program-description',
-                  })}
-                >
+                  })}>
                   <DescriptionIcon height="14" width="14" />
                 </ToolTipContainer>
               </Body>
@@ -223,8 +219,7 @@ const ProjectDetailsForm = () => {
                   <ToolTipContainer
                     tooltip={intl.formatMessage({
                       id: 'projects-project-link-description',
-                    })}
-                  >
+                    })}>
                     <DescriptionIcon height="14" width="14" />
                   </ToolTipContainer>
                 </Body>
@@ -257,8 +252,7 @@ const ProjectDetailsForm = () => {
                 <ToolTipContainer
                   tooltip={intl.formatMessage({
                     id: 'projects-sector-description',
-                  })}
-                >
+                  })}>
                   <DescriptionIcon height="14" width="14" />
                 </ToolTipContainer>
               </Body>
@@ -292,8 +286,7 @@ const ProjectDetailsForm = () => {
                 <ToolTipContainer
                   tooltip={intl.formatMessage({
                     id: 'projects-project-type-description',
-                  })}
-                >
+                  })}>
                   <DescriptionIcon height="14" width="14" />
                 </ToolTipContainer>
               </Body>
@@ -325,8 +318,7 @@ const ProjectDetailsForm = () => {
                 <ToolTipContainer
                   tooltip={intl.formatMessage({
                     id: 'projects-project-status-description',
-                  })}
-                >
+                  })}>
                   <DescriptionIcon height="14" width="14" />
                 </ToolTipContainer>
               </Body>
@@ -362,8 +354,7 @@ const ProjectDetailsForm = () => {
                 <ToolTipContainer
                   tooltip={intl.formatMessage({
                     id: 'projects-project-status-date-description',
-                  })}
-                >
+                  })}>
                   <DescriptionIcon height="14" width="14" />
                 </ToolTipContainer>
               </Body>
@@ -398,8 +389,7 @@ const ProjectDetailsForm = () => {
                 <ToolTipContainer
                   tooltip={intl.formatMessage({
                     id: 'projects-covered-by-ndc-description',
-                  })}
-                >
+                  })}>
                   <DescriptionIcon height="14" width="14" />
                 </ToolTipContainer>
               </Body>
@@ -436,8 +426,7 @@ const ProjectDetailsForm = () => {
                   <ToolTipContainer
                     tooltip={intl.formatMessage({
                       id: 'projects-ndc-information-description',
-                    })}
-                  >
+                    })}>
                     <DescriptionIcon height="14" width="14" />
                   </ToolTipContainer>
                 </Body>
@@ -472,34 +461,21 @@ const ProjectDetailsForm = () => {
                   <ToolTipContainer
                     tooltip={intl.formatMessage({
                       id: 'projects-current-registry-description',
-                    })}
-                  >
+                    })}>
                     <DescriptionIcon height="14" width="14" />
                   </ToolTipContainer>
                 </Body>
               </StyledLabelContainer>
               <InputContainer>
                 {pickLists?.registries ? (
-                  <SimpleSelect
-                    addInput="current-registry"
+                  <SelectCreatable
                     variant={
                       errors.currentRegistry &&
                       touched.currentRegistry &&
                       SimpleSelectVariantEnum.error
                     }
-                    size={SimpleSelectSizeEnum.large}
-                    type={SimpleSelectTypeEnum.basic}
                     options={pickLists.registries}
-                    state={SimpleSelectStateEnum.default}
-                    selected={
-                      values.currentRegistry
-                        ? [values.currentRegistry]
-                        : undefined
-                    }
-                    onChange={selectedOptions =>
-                      setFieldValue('currentRegistry', selectedOptions[0])
-                    }
-                    onBlur={handleBlur}
+                    onChange={val => setFieldValue('currentRegistry', val)}
                   />
                 ) : (
                   <StandardInput
@@ -532,34 +508,21 @@ const ProjectDetailsForm = () => {
                 <ToolTipContainer
                   tooltip={intl.formatMessage({
                     id: 'projects-registry-of-origin-description',
-                  })}
-                >
+                  })}>
                   <DescriptionIcon height="14" width="14" />
                 </ToolTipContainer>
               </Body>
             </StyledLabelContainer>
             <InputContainer>
               {pickLists?.registries ? (
-                <SimpleSelect
-                  addInput="registry-of-origin"
+                <SelectCreatable
                   variant={
                     errors.registryOfOrigin &&
                     touched.registryOfOrigin &&
                     SimpleSelectVariantEnum.error
                   }
-                  size={SimpleSelectSizeEnum.large}
-                  type={SimpleSelectTypeEnum.basic}
                   options={pickLists.registries}
-                  state={SimpleSelectStateEnum.default}
-                  selected={
-                    values.registryOfOrigin
-                      ? [values.registryOfOrigin]
-                      : undefined
-                  }
-                  onChange={selectedOptions =>
-                    setFieldValue('registryOfOrigin', selectedOptions[0])
-                  }
-                  onBlur={handleBlur}
+                  onChange={val => setFieldValue('registryOfOrigin', val)}
                 />
               ) : (
                 <StandardInput
@@ -592,8 +555,7 @@ const ProjectDetailsForm = () => {
                 <ToolTipContainer
                   tooltip={intl.formatMessage({
                     id: 'projects-origin-project-id-description',
-                  })}
-                >
+                  })}>
                   <DescriptionIcon height="14" width="14" />
                 </ToolTipContainer>
               </Body>
@@ -630,8 +592,7 @@ const ProjectDetailsForm = () => {
                 <ToolTipContainer
                   tooltip={intl.formatMessage({
                     id: 'projects-unit-metric-description',
-                  })}
-                >
+                  })}>
                   <DescriptionIcon height="14" width="14" />
                 </ToolTipContainer>
               </Body>
@@ -670,32 +631,20 @@ const ProjectDetailsForm = () => {
                   <ToolTipContainer
                     tooltip={intl.formatMessage({
                       id: 'projects-methodology-description',
-                    })}
-                  >
+                    })}>
                     <DescriptionIcon height="14" width="14" />
                   </ToolTipContainer>
                 </Body>
               </StyledLabelContainer>
               {pickLists?.methodology ? (
-                <SimpleSelect
-                  width="100%"
-                  addInput="methodology"
+                <SelectCreatable
                   variant={
                     errors.methodology &&
                     touched.methodology &&
                     SimpleSelectVariantEnum.error
                   }
-                  size={SimpleSelectSizeEnum.large}
-                  type={SimpleSelectTypeEnum.basic}
                   options={pickLists.methodology}
-                  state={SimpleSelectStateEnum.default}
-                  selected={
-                    values.methodology ? [values.methodology] : undefined
-                  }
-                  onChange={selectedOptions =>
-                    setFieldValue('methodology', selectedOptions[0])
-                  }
-                  onBlur={handleBlur}
+                  onChange={val => setFieldValue('methodology', val)}
                 />
               ) : (
                 <StandardInput
@@ -727,8 +676,7 @@ const ProjectDetailsForm = () => {
                 <ToolTipContainer
                   tooltip={intl.formatMessage({
                     id: 'projects-validation-body-description',
-                  })}
-                >
+                  })}>
                   <DescriptionIcon height="14" width="14" />
                 </ToolTipContainer>
               </Body>
@@ -759,8 +707,7 @@ const ProjectDetailsForm = () => {
                 <ToolTipContainer
                   tooltip={intl.formatMessage({
                     id: 'projects-validation-date-description',
-                  })}
-                >
+                  })}>
                   <DescriptionIcon height="14" width="14" />
                 </ToolTipContainer>
               </Body>
@@ -794,8 +741,7 @@ const ProjectDetailsForm = () => {
                   <ToolTipContainer
                     tooltip={intl.formatMessage({
                       id: 'projects-project-tags-description',
-                    })}
-                  >
+                    })}>
                     <DescriptionIcon height="14" width="14" />
                   </ToolTipContainer>
                 </Body>

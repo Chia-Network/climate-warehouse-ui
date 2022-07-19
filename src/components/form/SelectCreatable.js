@@ -46,7 +46,7 @@ const StyledCreatableSelect = styled(CreatableSelect)`
   }}
 `;
 
-const SelectCreatable = withTheme(({ variant, options, onChange }) => {
+const SelectCreatable = withTheme(({ isMulti, variant, options, onChange }) => {
   const optionsList = useMemo(
     () =>
       options?.map(optionItem => ({
@@ -58,14 +58,14 @@ const SelectCreatable = withTheme(({ variant, options, onChange }) => {
 
   const handleChange = useCallback(
     newValue =>
-      onChange(newValue?.map(selectedItem => selectedItem.value) ?? []),
+      onChange(newValue?.map ? newValue.map(selectedItem => selectedItem?.value) : newValue.value),
     [onChange],
   );
 
   return (
     <Body>
       <StyledCreatableSelect
-        isMulti
+        isMulti={isMulti}
         onChange={handleChange}
         options={optionsList}
         variant={variant}
