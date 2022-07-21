@@ -394,6 +394,7 @@
   "governance-picklists-update-failed": "ガバナンス選択リストを更新できませんでした。",
   "governance-orglist-updated-successfully": "ガバナンス組織リストが正常に更新されました。",
   "governance-orglist-update-failed": "ガバナンス組織リストを更新できませんでした。",
+  "select": "選択する",
   "edit-staged-project": "段階的なプロジェクトを編集する",
   "staging-group-could-not-be-edited": "ステージンググループを編集できませんでした。",
   "staging-group-edited": "ステージンググループは正常に編集されました。",

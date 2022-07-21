@@ -394,6 +394,7 @@
   "governance-picklists-update-failed": "Las listas de selección de gobernanza no se pudieron actualizar.",
   "governance-orglist-updated-successfully": "La lista de organizaciones de gobierno se actualizó correctamente.",
   "governance-orglist-update-failed": "No se pudo actualizar la lista de organizaciones de gobierno.",
+  "select": "Seleccione",
   "edit-staged-project": "Editar proyecto en etapas",
   "staging-group-could-not-be-edited": "No se pudo editar el grupo de ensayo.",
   "staging-group-edited": "El grupo de ensayo se editó correctamente.",
