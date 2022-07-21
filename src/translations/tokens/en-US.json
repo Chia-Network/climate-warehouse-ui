@@ -191,6 +191,7 @@
   "units": "Units",
   "storybook": "Storybook",
   "current-registry": "Current Registry",
+  "basic-registry": "Basic Registry",
   "registry-of-origin": "Registry of Origin",
   "origin-project-id": "Origin Project ID",
   "program": "Program",

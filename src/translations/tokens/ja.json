@@ -271,6 +271,7 @@
   "confirm-deletion": "削除してもよろしいですか？",
   "my-units": "私のユニット",
   "my-projects": "私のプロジェクト",
+  "basic-registry": "基本レジストリ",
   "create-organization": "組織を作成する",
   "you-need-to-create-organization": "レジストリに完全にアクセスするには、組織を作成する必要があります。",
   "organization-name": "組織名",
@@ -405,3 +406,4 @@
   "syncing": "同期...",
   "synced": "同期されます!"
 }
+

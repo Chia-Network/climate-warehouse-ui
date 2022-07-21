@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styled, { withTheme } from 'styled-components';
-import { CircularProgress } from '@mui/material';
 import {
   ButtonText,
   WarehouseIcon,
@@ -14,7 +13,6 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import { OrgCreateFormModal } from '../forms';
 import { modalTypeEnum } from '.';
 import { getOrganizationData } from '../../store/actions/climateWarehouseActions';
-import { OrganizationIcon } from '../icons';
 import { getHomeOrg } from '../../store/view/organization.view';
 
 const Container = styled('div')`
@@ -126,51 +124,7 @@ const LeftNav = withTheme(({ children }) => {
             <StyledTitleContainer disabled={myOrgIsNotCreated}>
               <RegistryIcon height={20} width={20} />
               <ButtonText>
-                <FormattedMessage id="registry" />
-              </ButtonText>
-            </StyledTitleContainer>
-            {!myOrgIsNotCreated && !isMyOrgPending && (
-              <>
-                <MenuItem
-                  selected={isProjectsPage && isMyRegistryPage}
-                  to={`/projects?orgUid=${myOrgUid}&myRegistry=true`}
-                >
-                  <FormattedMessage id="my-projects" />
-                </MenuItem>
-                <div></div>
-                <MenuItem
-                  selected={isUnitsPage && isMyRegistryPage}
-                  to={`/units?orgUid=${myOrgUid}&myRegistry=true`}
-                >
-                  <FormattedMessage id="my-units" />
-                </MenuItem>
-              </>
-            )}
-            {myOrgIsNotCreated && (
-              <>
-                <MenuItem
-                  to={window.location}
-                  onClick={() => setConfirmCreateOrgIsVisible(true)}
-                  disabled
-                >
-                  <FormattedMessage id="my-projects" />
-                </MenuItem>
-                <div></div>
-                <MenuItem
-                  to={window.location}
-                  onClick={() => setConfirmCreateOrgIsVisible(true)}
-                  disabled
-                >
-                  <FormattedMessage id="my-units" />
-                </MenuItem>
-              </>
-            )}
-
-            <StyledTitleContainer>
-              {isMyOrgPending && <CircularProgress size={20} thickness={5} />}
-              {!isMyOrgPending && <OrganizationIcon height={20} width={20} />}
-              <ButtonText>
-                <FormattedMessage id="organization" />
+                <FormattedMessage id="basic-registry" />
               </ButtonText>
             </StyledTitleContainer>
             {!myOrgIsNotCreated && !isMyOrgPending && (
@@ -187,8 +141,7 @@ const LeftNav = withTheme(({ children }) => {
               <MenuItem
                 selected={createOrgIsVisible}
                 to={window.location}
-                onClick={() => setCreateOrgIsVisible(true)}
-              >
+                onClick={() => setCreateOrgIsVisible(true)}>
                 <FormattedMessage id="create-organization" />
               </MenuItem>
             )}
@@ -196,6 +149,38 @@ const LeftNav = withTheme(({ children }) => {
               <MenuItem to={window.location} disabled>
                 <FormattedMessage id="creating-organization" />
               </MenuItem>
+            )}
+            {!myOrgIsNotCreated && !isMyOrgPending && (
+              <>
+                <MenuItem
+                  selected={isProjectsPage && isMyRegistryPage}
+                  to={`/projects?orgUid=${myOrgUid}&myRegistry=true`}>
+                  <FormattedMessage id="my-projects" />
+                </MenuItem>
+                <div></div>
+                <MenuItem
+                  selected={isUnitsPage && isMyRegistryPage}
+                  to={`/units?orgUid=${myOrgUid}&myRegistry=true`}>
+                  <FormattedMessage id="my-units" />
+                </MenuItem>
+              </>
+            )}
+            {myOrgIsNotCreated && (
+              <>
+                <MenuItem
+                  to={window.location}
+                  onClick={() => setConfirmCreateOrgIsVisible(true)}
+                  disabled>
+                  <FormattedMessage id="my-projects" />
+                </MenuItem>
+                <div></div>
+                <MenuItem
+                  to={window.location}
+                  onClick={() => setConfirmCreateOrgIsVisible(true)}
+                  disabled>
+                  <FormattedMessage id="my-units" />
+                </MenuItem>
+              </>
             )}
           </>
         )}
