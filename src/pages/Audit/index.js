@@ -244,6 +244,11 @@ const Audit = () => {
                 </StyledTh>
                 <StyledTh>
                   <Body size="Bold">
+                    <FormattedMessage id="author" />
+                  </Body>
+                </StyledTh>
+                <StyledTh>
+                  <Body size="Bold">
                     <FormattedMessage id="comment" />
                   </Body>
                 </StyledTh>
@@ -277,6 +282,9 @@ const Audit = () => {
                     </StyledTd>
                     <StyledTd>
                       <Body>{auditItem.rootHash}</Body>
+                    </StyledTd>
+                    <StyledTd>
+                      <Body>{auditItem.author}</Body>
                     </StyledTd>
                     <StyledTd>
                       <Body>{auditItem.comment}</Body>

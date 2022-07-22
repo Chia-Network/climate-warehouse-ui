@@ -28,7 +28,12 @@ const AuditItemModal = ({ onClose, auditItem }) => {
   const intl = useIntl();
   const change = auditItem.change && JSON.parse(auditItem.change);
 
-  const bodyColor = auditItem.type === 'INSERT' ? theme.colors.default.status.ok.primary : theme.colors.default.status.error.primary;
+  const bodyColor =
+    auditItem.type === 'INSERT'
+      ? theme.colors.default.status.ok.primary
+      : theme.colors.default.status.error.primary;
+
+  console.log('auditItem', auditItem);
 
   return (
     <>
@@ -83,6 +88,16 @@ const AuditItemModal = ({ onClose, auditItem }) => {
                 </div>
                 <StyledTextContainer>
                   <Body>{auditItem.rootHash}</Body>
+                </StyledTextContainer>
+              </div>
+              <div>
+                <div>
+                  <Body size="Bold" color="#40A9FF">
+                    <FormattedMessage id="author" />
+                  </Body>
+                </div>
+                <StyledTextContainer>
+                  <Body>{auditItem.author}</Body>
                 </StyledTextContainer>
               </div>
               <div>

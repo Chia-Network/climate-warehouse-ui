@@ -421,5 +421,6 @@
   "spendable-balance": "Spendable Balance",
   "wallet-sync-status": "Wallet Sync Status",
   "syncing": "Syncing...",
-  "synced": "Synced!"
+  "synced": "Synced!",
+  "author": "Author"
 }

@@ -403,5 +403,6 @@
   "spendable-balance": "Saldo disponible",
   "wallet-sync-status": "Estado de sincronización de billetera",
   "syncing": "Sincronizando...",
-  "synced": "Está sincronizado!"
+  "synced": "Está sincronizado!",
+  "author": "Autor"
 }

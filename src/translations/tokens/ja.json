@@ -403,5 +403,6 @@
   "spendable-balance": "支出可能な残高",
   "wallet-sync-status": "ウォレットの同期ステータス",
   "syncing": "同期...",
-  "synced": "同期されます!"
+  "synced": "同期されます!",
+  "author": "著者"
 }
