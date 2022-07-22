@@ -112,7 +112,7 @@
   "units-unit-status-reason-description": "ステータスの適切な理由を入力します。理由が何も必要ない場合は、単に「N/A」と入力します。",
   "units-unit-link-registry-description": "ユニットをホストするレジストリにリンクする URL を入力します。",
   "units-corresponding-adjustment-declaration-description": "S単位に対応する調整能力があるかどうかを選択します。",
-  "units-corresponding-adjustment-status-description": "実行された対応する調整のステータスを選択します。",
+  "units-corresponding-adjustment-status-description": "初めての転送の場合は、実行された対応する調整の対応するステータスを選択します。",
   "issuances-warehouse-project-id-description": "気候倉庫内のプロジェクトの一意の識別子です。",
   "issuances-issuance-id-description": "特定の単位の発行を表す一意の識別子です。",
   "issuances-start-date-description": "単一の発行で出荷を開始した日付を入力します。",

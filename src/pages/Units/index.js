@@ -298,8 +298,6 @@ const Units = () => {
         'unitOwner',
         'countryJurisdictionOfOwner',
         'serialNumberBlock',
-        'unitBlockStart',
-        'unitBlockEnd',
         'unitCount',
         'vintageYear',
         'unitType',

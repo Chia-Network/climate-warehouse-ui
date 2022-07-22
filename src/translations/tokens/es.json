@@ -109,7 +109,7 @@
   "units-unit-status-reason-description": "Introduzca el motivo apropiado para el estado. Si no se necesita ninguna razón, simplemente ingrese 'N / A'.",
   "units-unit-link-registry-description": "Introduzca la dirección URL que enlaza con el registro que aloja las unidades.",
   "units-corresponding-adjustment-declaration-description": "Seleccione si las unidades tienen o no la capacidad de ajuste correspondiente.",
-  "units-corresponding-adjustment-status-description": "Seleccione el estado correspondiente del ajuste correspondiente que se ha realizado.",
+  "units-corresponding-adjustment-status-description": "Si se trata de una transferencia por primera vez, seleccione el estado correspondiente del ajuste correspondiente que se ha realizado.",
   "issuances-warehouse-project-id-description": "Identificador único para proyectos dentro del Almacén Climático.",
   "issuances-issuance-id-description": "Identificador único para una emisión específica de unidades.",
   "issuances-start-date-description": "Ingrese la fecha para la cual las unidades comenzaron a emitirse bajo una sola emisión.",
