@@ -403,5 +403,7 @@
   "spendable-balance": "Saldo disponible",
   "wallet-sync-status": "Estado de sincronización de billetera",
   "syncing": "Sincronizando...",
-  "synced": "Está sincronizado!"
+  "synced": "Está sincronizado!",
+  "edit-split-unit": "Editar puesta en escena de unidad dividida",
+  "update": "Actualizar"
 }

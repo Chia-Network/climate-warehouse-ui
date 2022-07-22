@@ -421,5 +421,7 @@
   "spendable-balance": "Spendable Balance",
   "wallet-sync-status": "Wallet Sync Status",
   "syncing": "Syncing...",
-  "synced": "Synced!"
+  "synced": "Synced!",
+  "edit-split-unit": "Edit split unit staging",
+  "update": "Update"
 }
